@@ -102,9 +102,8 @@
       padding-top: 10em;
     
   }
-  .img-box-tech {
+  .img-box-tech.image-visible{
     width: 530px;
-    
     height: auto;
   }
   /* .img-box-tech .hide-head {
@@ -113,7 +112,24 @@
   .img-box-tech img {
     width: 100%;
     height: 100%;
-    border-radius: 10%;
+    border-radius: 5%;
+  }
+  .img-box-tech.image-hidden{
+    display: none;
+  }
+  @media screen and (max-width:768px) {
+  .img-box-tech.image-hidden{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  .img-box-tech.image-visible{
+    display: none;
+  }
+  .content-boxs h2 {
+    text-align: center;
+  }
   }
   @media(max-width:932px)
   {
@@ -354,8 +370,13 @@ h5 {
       color: rgb(39, 38, 38);
      
     }
-    .content-boxs
+    /* .content-boxs
     {
+      background: #00000099;
+      padding: 1em 0.90em;
+     
+    } */
+    .content-boxs-parent {
       background: #00000099;
       padding: 1em 0.90em;
      
@@ -396,7 +417,7 @@ h5 {
     }
     .content-boxs
     {
-      background: #00000099;
+      /* background: #00000099; */
       padding: 1em 0.50em;
      
     }
@@ -440,12 +461,15 @@ h5 {
 
 <div class="container-fluid">
 
-  <section>
+  <section class="pb-0">
     <div class="container mt-3">
-      <div class="row  g-3">
-        <div class=" col-lg-6 ">
-          <div class="content-boxs">
+      <div class="row  g-3 content-boxs-parent border-0 rounded-4">
+        <div class="col-lg-6 col-sm-12 col-md-6 px-3">
+          <div class="content-boxs border-0 rounded-4">
             <h2>ERP </h2>
+            <div class="img-box-tech image-hidden">
+              <img src="static/img/team/erp.png" alt="ERP" />
+            </div>
           <p>Accounting, inventory management, customer relationship management, 
             and other modules are all included in our ERP system. Together, these modules give you a complete picture of your company's operations, including its finances, customer interactions, and everything in between. Additionally, our software may be modified to meet the particular requirements of your company, ensuring that it is adapted to your particular industry and demands.</p>
             <p>Moreover, your staff will have no trouble using and navigating our ERP software because of its user-friendly design. With the help of our software, you may automate routine processes, lower error rates, and boost productivity.
@@ -453,8 +477,8 @@ h5 {
           </div>
           
         </div>
-        <div class="col-lg-6 col-sm-12 col-md-6 px-5">
-          <div class="img-box-tech">
+        <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
+          <div class="img-box-tech image-visible">
             <!-- <h4 class="hide-head">ERP</h4> -->
             <img src="static/img/team/erp.png" alt="ERP" />
           </div>
@@ -481,9 +505,9 @@ h5 {
     </div>
   </section>
 
-  <section>
+  <section class="pt-0">
     <div class="container mt-3">
-      <div class="row  g-3">
+      <div class="row  g-3 content-boxs-parent border-0 rounded-4"">
         <!-- <div class=" col-lg-6 col-sm-12 col-md-6">
           <div class="content-boxs">
             <h2>ERP </h2>
@@ -494,15 +518,18 @@ h5 {
           </div>
           
         </div> -->
-        <div class="col-lg-6 col-sm-12 col-md-6 px-5">
-          <div class="img-box-tech">
+        <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
+          <div class="img-box-tech image-visible">
             <!-- <h4 class="hide-head">CRM</h4> -->
             <img src="static/img/team/crm.png" alt="CRM" />
           </div>
         </div>
-        <div class="col-lg-6 col-sm-12 col-md-6">
-          <div class="content-boxs">
+        <div class="col-lg-6 col-sm-12 col-md-6 px-3">
+          <div class="content-boxs border-0 rounded-4">
           <h2>CRM </h2>
+          <div class="img-box-tech image-hidden">
+            <img src="static/img/team/crm.png" alt="CRM" />
+          </div>
           <p>We recognise that each business is different and that commercial CRM 
             software might not always meet your organization's precise demands and objectives. 
             We provide a unique CRM solution designed specifically for your company because of this.
@@ -732,12 +759,15 @@ h5 {
 </section>
 
 
-<section>
+<section class="pb-0">
   <div class="container mt-3">
-    <div class="row  g-3">
-      <div class=" col-lg-6 col-sm-12 col-md-6">
-        <div class="content-boxs">
+    <div class="row  g-3 content-boxs-parent">
+      <div class="col-lg-7 col-sm-12 col-md-7 px-1">
+        <div class="content-boxs border-0 rounded-4">
           <h2>HRMS  </h2>
+          <div class="img-box-tech image-hidden">
+            <img src="static/img/team/hrms.png" alt="HRMS" />
+          </div>
         <p>Our HRMS software includes modules for employee records management, benefits administration, 
           payroll management, performance management, and more. These modules work together to provide a 
           complete picture of your workforce, from hiring to retirement, and everything in between. Moreover, 
@@ -759,9 +789,103 @@ h5 {
         </div>
         
       </div>
-      <div class="col-lg-6 col-sm-12 col-md-6">
+      <div class="col-lg-5 col-sm-12 col-md-5 px-4 d-flex align-items-center">
+        <div class="img-box-tech image-visible">
+          <!-- <h4 class="hide-head">ERP</h4> -->
+          <img src="static/img/team/hrms.png" alt="HRMS" />
+        </div>
+      </div>
+      <!-- <div class="col-lg-6 col-sm-12 col-md-6">
         <div class="content-boxs">
         <h2>Accounting software  </h2>
+        <p>The software we provide for accounting includes modules 
+          that deal with invoices, payments, and receivables along with 
+          financial reporting and general ledger. These modules work together 
+          to provide a complete picture of your financials, from cash flow to profit 
+          and loss, and everything in between. Moreover, our software can be customized to
+          suit the unique needs of your business, ensuring that it is suited to the industry 
+          and requirements specific to your business.
+        </p>
+        <p>
+          Our accounting software is also designed to be user-friendly, making it 
+          easy for your team to navigate and use. With our software, you can automate 
+          repetitive tasks, reduce errors, and improve
+ 
+          overall efficiency. Our software also includes features such as multi-currency support, 
+          tax calculations, and automatic bank reconciliation, which can help you save time and reduce errors.
+
+
+        </p>
+        </div>
+      </div> -->
+      <!-- <div class="col-lg-6 col-sm-12 col-md-6">
+        <div class="content-boxs">
+        <h2>Digital Marketing  </h2>
+        <p>Our team has extensive experience in creating and executing 
+          successful digital marketing campaigns. We stay up-to-date with the 
+          latest trends and best practices in digital marketing to ensure that 
+          your campaigns are effective and efficient. We use data-driven approach 
+          to track your progress and make data-driven decisions to optimize the 
+          performance of your campaigns.
+        </p>
+        <p>
+          Whether you're looking to increase brand awareness, drive more 
+          traffic to your website, or generate leads, our team has the skills and 
+          experience to help you achieve your goals. Our services include search 
+          engine optimization (SEO), pay-per-click advertising (PPC), social media 
+          marketing, email marketing, and more. We work with you to understand your 
+          target audience and create a customized strategy that will help you reach 
+          them where they are.
+        </p>
+        </div>
+      </div> -->
+      
+    </div>
+  </div>
+</section>
+
+<section class="pt-0">
+  <div class="container mt-3">
+    <div class="row  g-3 content-boxs-parent">
+      <!-- <div class="col-lg-6 col-sm-12 col-md-6 px-3">
+        <div class="content-boxs">
+          <h2>HRMS  </h2>
+          <div class="img-box-tech image-hidden">
+            <img src="static/img/team/erp.png" alt="ERP" />
+          </div>
+        <p>Our HRMS software includes modules for employee records management, benefits administration, 
+          payroll management, performance management, and more. These modules work together to provide a 
+          complete picture of your workforce, from hiring to retirement, and everything in between. Moreover, 
+          our software is customizable to suit the needs of your specific business, ensuring that it matches 
+          your industry and requirements.
+
+        </p>
+        <p>
+          The HRMS software is also designed to be user-friendly, making it easy for your team to 
+          navigate and use. With our software, you can automate repetitive tasks, reduce errors, 
+          and improve overall efficiency.
+        </p>
+        <p>
+          Our software also includes Self-service portal for employees, where they can access their 
+          personal information, benefits, and request time off. This portal can also be integrated with 
+          other systems, such as payroll and benefits, to provide employees with a comprehensive view of 
+          their employment information.
+        </p>
+        </div>
+        
+      </div> -->
+      <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
+        <div class="img-box-tech image-visible">
+          <!-- <h4 class="hide-head">ERP</h4> -->
+          <img src="static/img/team/account.png" alt="ACCOUNTING" />
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 col-md-6 px-1">
+        <div class="content-boxs border-0 rounded-4">
+        <h2>Accounting software  </h2>
+        <div class="img-box-tech image-hidden">
+          <img src="static/img/team/account.png" alt="ACCOUNTING" />
+        </div>
         <p>The software we provide for accounting includes modules 
           that deal with invoices, payments, and receivables along with 
           financial reporting and general ledger. These modules work together 

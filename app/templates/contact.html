@@ -73,9 +73,27 @@
    .contact .email-form{
     width: 70% !important;
    }
+   .address-section{
+    background: #00000099;
+   }
+   .location-first::after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    position: absolute;
+    height: 40%;
+    right: 0;
+    top: 60%;
+    background-color: #ffffff9c;
+   }
    @media (max-width:932px){
     .contact .email-form{
     width: 95% !important;
+    }
+   }
+   @media (max-width:768px) {
+    .location-first::after{
+      display: none;
     }
    }
 </style>
@@ -103,7 +121,7 @@
         </div>
       </div>
 
-      <div id="contact-form-section" class="row mb-5">
+      <div id="contact-form-section" class="row mb-0">
         <div class="col-lg-12 col-md-12 mt-5 mb-3 mt-lg-0 d-flex justify-content-center">
 
           <form action="{% url 'meeasges_send' %}" method="post"  class="email-form">
@@ -133,12 +151,12 @@
         </div>
       </div>
       
-      <div class="row address-section">
-        <div class="col-lg-6 col-md-6">
+      <div class="row address-section py-4 px-2">
+        <div class="col-lg-6 col-md-6" style="position: relative;">
           <div class="map-iframe">
             <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d503151.017142787!2d76.524882!3d9.861497!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x3b080d9bfaa6db61%3A0xa5df6acfc2d1e5fd!2sALTOS%20Technologies%2C%201st%20floor%2C%20Thapasaya%20Building%2C%20Infopark%2C%20Kakanad%2C%20Kochi%2C%20Kerala%20682042!3m2!1d10.0107422!2d76.36069859999999!5e0!3m2!1sen!2sin!4v1672377111826!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div class="location-details">
+          <div class="location-details location-first">
             <div class="info row" style="background: transparent;">
               <div class="address col-md-6 mt-3">
                 <i class="bi bi-geo-alt" style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
@@ -175,7 +193,7 @@
           </div>
 
           <div class="location-details">
-            <div class="info row" style="background: transparent;">
+            <div class="info row d-flex justify-content-end" style="background: transparent;">
               <div class=" col-md-6 mt-3">
                 <i class="bi bi-geo-alt" style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Location:</h4>
@@ -198,8 +216,8 @@
               <div class="phone col-md-6 mt-3">
                 <i class="bi bi-phone"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Call:</h4>
-                <!-- <p style="color: rgb(169, 169, 169);"> +91 90741 56818</p> -->
-                <p style="color: rgb(169, 169, 169);">Tamilnadu -  +91 73065 42853</p>
+                <!-- <p style="color: rgb(169, 169, 169);">Kerala -  +91 90741 56818</p> -->
+                <p style="color: rgb(169, 169, 169);">  +91 73065 42853</p>
               </div>
   
             </div>
