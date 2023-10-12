@@ -9,9 +9,10 @@ from django.views.static import serve
 urlpatterns = [
 
   
-    path('',views.text_page,name='text_page'),
+    path('',views.landingPage,name='landigPage'),
     path('Vacancy',views.vacancy,name='vacancy'),
-    path('home',views.home,name='home'),
+    path('home',views.text_page,name='text_page'),
+    # path('home',views.home,name='home'),
     path('contact',views.contact,name='contact'),
     path('course',views.course,name='course'),
     path('aboutus',views.aboutus,name='aboutus'),

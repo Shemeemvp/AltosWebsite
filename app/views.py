@@ -11,6 +11,10 @@ def handler404(request, exception):
     return render(request, '404.html', status=404)
 
 # Create your views here.
+
+def landingPage(request):
+    return render(request, 'landingpage.html')
+
 def ex(request):
     return render(request, 'ex.html')
 
